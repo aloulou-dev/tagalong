@@ -1,1 +1,3 @@
-TagAlong is a perosnalized travekl planning application that generates custom itineraries based on a user's desitnation, travel dates, budget, and interests
+TagAlong is a perosnalized travekl planning application that generates custom itineraries based on a user's desitnation, travel dates, budget, and interests.
+
+this is a test
