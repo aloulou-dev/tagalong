@@ -1,9 +1,8 @@
 import sqlite3
 from places_connector import get_attractions
+from user_input import get_user_input
 
-def plan_attractions():
-    from user_input import get_user_input
-    destination, start_date, end_date = get_user_input()
+def plan_attractions(destination):
     attractions = get_attractions(destination)
 
     conn = sqlite3.connect("tagalong.db")
@@ -16,10 +15,8 @@ def plan_attractions():
     print(f"Saved {len(attractions)} attractions for {destination}.")
 
 
-def plan_itinerary():
-    from user_input import get_user_input
+def plan_itinerary(destination, start_date, end_date):
     from weather_api import get_weather_forecast
-    destination, start_date, end_date = get_user_input()
     weather = get_weather_forecast(destination, start_date, end_date)
 
     conn = sqlite3.connect("tagalong.db")
@@ -35,14 +32,7 @@ def plan_itinerary():
 # for testing purposes only remove for production because we will only make the intinerary, and it will include the attractions and the weather
 
 print("welcome to tagalong!")
-choice = input("Type 1 to plan attractions, 2 to plan itinerary, or 3 to do both:")
-if choice == "1":
-    plan_attractions()
-elif choice == "2":
-    plan_itinerary()
-elif choice == "3":
-    plan_attractions()
-    plan_itinerary()
-else:
-    print("Invalid choice. Please enter 1, 2, or 3.")
-        
+destination, start_date, end_date = get_user_input()
+plan_attractions(destination)
+plan_itinerary(destination, start_date, end_date)
+

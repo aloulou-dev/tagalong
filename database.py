@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS itineraries(
     trip_id INTEGER NOT NULL,
     activity TEXT NOT NULL,
     category TEXT NOT NULL,
-    date_time TEXT NOT NULL,
+    date_time TEXT,
     FOREIGN KEY (trip_id) REFERENCES trips(trip_id)
 
 );
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS connections(
     user_id INTEGER NOT NULL,
     connected_user_id INTEGER NOT NULL,
     destination TEXT NOT NULL,
-    date_time TEXT NOT NULL,
+    date_time TEXT,
     start_end TEXT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (connected_user_id) REFERENCES users(user_id)
