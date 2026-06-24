@@ -1,4 +1,4 @@
-# :Airplane: TagAlong
+#  :airplane: TagAlong
 
 TagAlong is a perosnalized travel planning application that generates custom itineraries based on a user's desitnation, travel dates, budget, and preferences.
 
