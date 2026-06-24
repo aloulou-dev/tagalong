@@ -21,7 +21,7 @@ def get_weather_forecast(destination, start_date, end_date):
     forecast_days = data["forecast"]["forecastday"]
 
     weather_summary =[]
-    for day in forcast_days:
+    for day in forecast_days:
         weather_summary.append({
             "date" : day["date"],
             "condition" : day["day"]["condition"]["text"],
