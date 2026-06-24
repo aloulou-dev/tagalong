@@ -34,8 +34,8 @@ put screenshot of itinerary
 
 - Python
 - SQLite Database
-- Weather API
-- Geoapify API
+- [Weather API](https://www.weatherapi.com)
+- [Geoapify API](https://www.geoapify.com/)
 - Generative AI API
 
 ## Contact
