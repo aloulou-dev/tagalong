@@ -23,7 +23,7 @@ def plan_itinerary(destination, start_date, end_date):
 
     conn = sqlite3.connect("tagalong.db")
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO trips (user_id, destination, start_date, end_date) VALUES (?,?,?,?)", (1, destination, start_date, end_date))
+    cursor.execute("INSERT INTO trips (user_id, destination, start_date, end_date) VALUES (?,?,?,?)", (user_id, destination, start_date, end_date))
     conn.commit()
     conn.close()
 
