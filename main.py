@@ -1,6 +1,7 @@
 import sqlite3
 from places_connector import get_attractions
 from user_input import get_user_input
+from ai_itinerary import generate_ai_itinerary
 
 def plan_attractions(destination):
     attractions = get_attractions(destination)
@@ -13,6 +14,7 @@ def plan_attractions(destination):
     conn.commit()
     conn.close()
     print(f"Saved {len(attractions)} attractions for {destination}.")
+    return attractions
 
 
 def plan_itinerary(destination, start_date, end_date):
@@ -26,6 +28,7 @@ def plan_itinerary(destination, start_date, end_date):
     conn.close()
 
     print(f"Saved weather for {destination}.")
+    return weather
 
 
 
@@ -33,6 +36,10 @@ def plan_itinerary(destination, start_date, end_date):
 
 print("welcome to tagalong!")
 destination, start_date, end_date = get_user_input()
-plan_attractions(destination)
-plan_itinerary(destination, start_date, end_date)
+attractions = plan_attractions(destination)
+weather = plan_itinerary(destination, start_date, end_date)
+
+itinerary = generate_ai_itinerary(destination, attractions, weather)
+print("\n--- Your Tagalong Itinerary ---")
+print(itinerary)
 
