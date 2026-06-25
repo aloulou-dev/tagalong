@@ -18,6 +18,7 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS trips(
     trip_id INTEGER PRIMARY KEY,
     user_id INTEGER NOT NULL,
+    name TEXT NOT NULL,
     destination TEXT NOT NULL,
     start_date TEXT NOT NULL,
     end_date TEXT NOT NULL,
