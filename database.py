@@ -4,6 +4,21 @@ import sqlite3
 conn = sqlite3.connect("tagalong.db")
 cursor = conn.cursor()
 
+def get_or_create_user(name, email):
+    cursor.execute("SELECT user_id FROM users WHERE name = ? AND email = ?", (name, email))
+
+    existing_user = cursor.fetchone()
+
+    if existing_user:
+        return existing_user[0]
+    
+    cursor.execute(
+        "INSERT INTO users (name, email) VALUES (?, ?)",
+        (name, email)
+    )
+    conn.commit()
+    return cursor.lastrowid
+
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS users(
@@ -18,7 +33,6 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS trips(
     trip_id INTEGER PRIMARY KEY,
     user_id INTEGER NOT NULL,
-    name TEXT NOT NULL,
     destination TEXT NOT NULL,
     start_date TEXT NOT NULL,
     end_date TEXT NOT NULL,
@@ -53,5 +67,5 @@ CREATE TABLE IF NOT EXISTS connections(
 """)
 
 conn.commit()
-conn.close()
+#conn.close()
 print("tables created")
