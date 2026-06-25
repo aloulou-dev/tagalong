@@ -1,8 +1,6 @@
 #  :airplane: TagAlong
 
-TagAlong is a perosnalized travel planning application that generates custom itineraries based on a user's desitnation, travel dates, budget, and preferences.
-
-The application helps travelers spend less time planning and more time exploring by combining travel information, weather data, and personalized recommendations.
+TagAlong is a personalized travel planning application that generates day-by-day itineraries tailored to a user's destination, travel dates, and preferences. by integrating weather forecasts, local attractions, and AI-powered recommendations, TagAlong helps travelers spend less time planning and more time exploring.
 
 ---------
 
@@ -10,9 +8,8 @@ The application helps travelers spend less time planning and more time exploring
 
     - Generate personalized day-by-day travel itineraries
     - Discover attraction, restaurants, events, and activities using external APIs
-    - Incorporate weather conditions into travel recommendations
-    - Store and manage trip information using a database
-    - Connect with travelers who share similar destinations, schedules, or interests
+    - Incorporate real-time weather forecasts into itinerary recommendations
+    - Store and manage trip information using a SQLite database
 
 ---------
 
@@ -22,7 +19,7 @@ The application helps travelers spend less time planning and more time exploring
 
 ![sampel user input in terminal](images/userInput_README.jpeg)
 
-### Weather and attraction retrieval 
+### Weather and Attraction Retrieval 
 
 ![Weather and attraction retrieval](images/weatherAttraction_README.jpeg)
 
@@ -32,15 +29,15 @@ The application helps travelers spend less time planning and more time exploring
 
 ## Technologies Used
 
-- Python
-- SQLite Database
+- Python3
+- SQLite 
 - [Weather API](https://www.weatherapi.com)
 - [Geoapify API](https://www.geoapify.com/)
-- Generative AI API
+- [Google Gemini API](https://ai.google.dev/gemini-api/docs)
 
 ## Contact
 
-For questions and/or suggestions regarding this project:
+For questions, suggestyions, or collaborative opportunities, please contact:
 
 ### Eva King-Senior
 - Email: [evakingsr@gmail.com](evakingsr@gmail.com)
@@ -48,7 +45,7 @@ For questions and/or suggestions regarding this project:
 
 ### Malek Aloulou
 - Email: [aloulou@bc.edu](aloulout@bc.edu)
-- GitHube: [aloulou-dev](https://github.com/aloulou-dev)
+- GitHub: [aloulou-dev](https://github.com/aloulou-dev)
 
 
     
