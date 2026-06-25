@@ -20,7 +20,7 @@ The application helps travelers spend less time planning and more time exploring
 
 ### User Input
 
-put screenshots of input and prompts from the terminal
+¡[sampel user input in terminal](userInput_README.jpeg)
 
 ### Weather and attraction retrieval 
 
