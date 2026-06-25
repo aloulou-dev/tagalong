@@ -20,15 +20,15 @@ The application helps travelers spend less time planning and more time exploring
 
 ### User Input
 
-¡[sampel user input in terminal](userInput_README.jpeg)
+¡[sampel user input in terminal](images/userInput_README.jpeg)
 
 ### Weather and attraction retrieval 
 
-put screenshots of the information given about weather an dpossible attractions
+¡[Weather and attraction retrieval](images/weatherAttraction_README.jpeg)
 
 ### Generated Itinerary
 
-put screenshot of itinerary
+¡[Sample Generated Itinerary](images/Gen_Itinerary_README.PNG)
 
 ## Technologies Used
 
