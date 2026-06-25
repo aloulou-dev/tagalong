@@ -19,7 +19,6 @@ CREATE TABLE IF NOT EXISTS trips(
     trip_id INTEGER PRIMARY KEY,
     user_id INTEGER NOT NULL,
     destination TEXT NOT NULL,
-    weather TEXT,
     start_date TEXT NOT NULL,
     end_date TEXT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
