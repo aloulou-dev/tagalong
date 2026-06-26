@@ -68,4 +68,4 @@ CREATE TABLE IF NOT EXISTS connections(
 
 conn.commit()
 #conn.close()
-print("tables created")
+#print("tables created")
