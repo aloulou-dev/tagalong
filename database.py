@@ -66,6 +66,29 @@ CREATE TABLE IF NOT EXISTS connections(
 );
 """)
 
+# Seed mock users and trips if database is empty
+cursor.execute("SELECT COUNT(*) FROM users")
+if cursor.fetchone()[0] == 0:
+    mock_users = [
+        ("Alice Smith", "alice@example.com"),
+        ("Bob Jones", "bob@example.com"),
+        ("Charlie Brown", "charlie@example.com")
+    ]
+    for name, email in mock_users:
+        cursor.execute("INSERT INTO users (name, email) VALUES (?, ?)", (name, email))
+
+    mock_trips = [
+        (1, "Paris", "2026-07-01", "2026-07-10"),
+        (2, "Paris", "2026-07-05", "2026-07-15"),
+        (3, "New York", "2026-07-01", "2026-07-08")
+    ]
+    for user_id, dest, start, end in mock_trips:
+        cursor.execute(
+            "INSERT INTO trips (user_id, destination, start_date, end_date) VALUES (?, ?, ?, ?)",
+            (user_id, dest, start, end)
+        )
+    print("Mock users and trips seeded for the demo.")
+
 conn.commit()
 #conn.close()
 #print("tables created")
